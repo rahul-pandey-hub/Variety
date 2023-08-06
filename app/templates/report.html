@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports</title>
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- bootsrap cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
+
+    <!-- iconscout cdn link -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- custome css link -->
+    <link rel="stylesheet" href="{% static 'app/css/cart.css' %}">
+
+    <link rel="stylesheet" href="{% static 'app/css/alertify.min.css' %}">
+</head>
+<body>
+    
+<!-- header section start  -->
+
+<header class="header fixed-top">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <a href="#" class="logo mr-auto">
+                {% comment %} <i class="fas fa-mug-hot" style=" position: relative;top: -3px;"> {% endcomment %}
+
+                </i>Reports</a>
+
+           
+
+            <div class="icons">
+                <div id="menu-btn" class="fas fa-bars"></div>
+                {% comment %} <div id="cart-btn" class="fas fa-shopping-cart"></div> {% endcomment %}
+            </div>
+            
+        </div>
+
+    </div>
+
+</header>
+
+<!-- header section end -->
+    
+<div class="sidebar-widget sidebar-blog-category">
+    <div class="sidebar-title">
+        {% comment %} <center><h2>Reports</h2></center> {% endcomment %}
+    </div>
+    <ul class="blog-cat">
+       <h1> <li><a href="{% url 'show_products' %}">Product Report</a></li></h1>
+       <h1> <li><a href="{% url 'show_product_category' %}">Product Category Report</a></li></h1>
+       <h1> <li><a href="{% url 'show_product_subcategory' %}">Product SubCategory Report</a></li></h1>
+       <h1> <li><a href="{% url 'show_product_brand' %}">Brand Report</a></li></h1>
+       <h1> <li><a href="{% url 'show_product_review' %}">Review Report</a></li></h1>
+       <h1> <li><a href="{% url 'show_order' %}">Order Report</a></li></h1>
+       <h1> <li><a href="{% url 'show_cart' %}">Cart Report</a></li></h1>
+        
+    </ul>
+</div>
+
+
+
+
+
+
+<script src="{% static 'app/js/jquery-3.6.3.min.js' %}"></script>
+<script src="{% static 'app/js/alertify.min.js' %}"></script>
+<script src="{% static 'app/js/ProductDetail.js' %}"></script>
+</body>
+</html>
